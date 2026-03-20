@@ -1,11 +1,11 @@
-# 🖥️ TrueNAS SCALE — Déploiement complet
+# TrueNAS SCALE — Déploiement complet
 
 > Projet réalisé dans le cadre du **Bachelor Administrateur Systèmes & Réseaux**  
 > La Plateforme_ — Marseille | Mars 2026
 
 ---
 
-## 📋 Description
+## Description
 
 Déploiement d'un serveur NAS complet sous **TrueNAS SCALE** en environnement virtualisé (VMware Workstation), incluant :
 
@@ -16,7 +16,7 @@ Déploiement d'un serveur NAS complet sous **TrueNAS SCALE** en environnement vi
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────┐
@@ -44,7 +44,7 @@ Déploiement d'un serveur NAS complet sous **TrueNAS SCALE** en environnement vi
 
 ---
 
-## ⚙️ Spécifications techniques
+## Spécifications techniques
 
 ### VM1 — Serveur TrueNAS SCALE
 
@@ -66,7 +66,7 @@ Déploiement d'un serveur NAS complet sous **TrueNAS SCALE** en environnement vi
 
 ---
 
-## 🚀 Services déployés
+## Services déployés
 
 | Service | Port | Protocole | Description |
 |---------|------|-----------|-------------|
@@ -78,7 +78,7 @@ Déploiement d'un serveur NAS complet sous **TrueNAS SCALE** en environnement vi
 
 ---
 
-## 📁 Structure du repo
+## Structure du repo
 
 ```
 truenas-scale/
@@ -93,7 +93,7 @@ truenas-scale/
 
 ---
 
-## 🔧 Installation
+## Installation
 
 ### 1. Télécharger l'ISO TrueNAS SCALE
 ```
@@ -122,7 +122,7 @@ Apps → Discover Apps → vaultwarden → Install
 
 ---
 
-## 🐳 Vaultwarden — Commandes utiles
+## Vaultwarden — Commandes utiles
 
 ```bash
 # Voir les conteneurs Docker
@@ -140,7 +140,7 @@ docker restart ix-vaultwarden-vaultwarden-1
 
 ---
 
-## 🔐 Comptes de test
+## Comptes de test
 
 | Utilisateur | Rôle | Accès |
 |-------------|------|-------|
@@ -148,11 +148,11 @@ docker restart ix-vaultwarden-vaultwarden-1
 | `user1` | Utilisateur SFTP | SSH :2222 + SFTP |
 | `user2` | Utilisateur SFTP | SSH :2222 + SFTP |
 
-> ⚠️ Les mots de passe ne sont pas stockés dans ce repo pour des raisons de sécurité.
+> Les mots de passe ne sont pas stockés dans ce repo pour des raisons de sécurité.
 
 ---
 
-## ⚠️ Problèmes rencontrés
+## Problèmes rencontrés
 
 | Problème | Solution |
 |----------|----------|
@@ -166,7 +166,7 @@ docker restart ix-vaultwarden-vaultwarden-1
 
 ---
 
-## 📚 Documentation
+## Documentation
 
 La documentation technique complète est disponible dans `docs/documentation_truenas.pdf`.
 
