@@ -1,0 +1,57 @@
+{
+  "_comment": "Configuration Vaultwarden — Projet TrueNAS SCALE — La Plateforme_ Marseille",
+  "_warning": "Ne jamais versionner ce fichier avec de vraies valeurs sensibles en production !",
+
+  "domain": "http://192.168.198.130:30032",
+
+  "admin_token": "REMPLACER_PAR_HASH_ARGON2_EN_PRODUCTION",
+
+  "email_verification_disabled": true,
+
+  "signups_allowed": true,
+  "signups_verify": false,
+  "signups_domains_whitelist": "",
+
+  "invitations_allowed": true,
+
+  "password_hints_allowed": true,
+  "show_password_hint": false,
+
+  "websocket_enabled": true,
+  "websocket_port": 3012,
+
+  "sends_allowed": true,
+
+  "emergency_access_allowed": true,
+
+  "disable_2fa_remember": false,
+
+  "org_creation_users": "all",
+
+  "log_level": "warn",
+  "extended_logging": true,
+  "log_timestamp_format": "%Y-%m-%d %H:%M:%S.%3f",
+
+  "_section_notes": {
+    "port": "30032 (mappé par TrueNAS SCALE Apps)",
+    "database": "PostgreSQL 18 (conteneur ix-vaultwarden-postgres-1)",
+    "conteneurs_docker": [
+      "ix-vaultwarden-vaultwarden-1 — Running (app principale)",
+      "ix-vaultwarden-postgres-1 — Running (base de données)",
+      "postgres_upgrade — Exited (migration terminée)",
+      "permissions — Exited (init terminée)"
+    ],
+    "acces_admin": "http://192.168.198.130:30032/admin",
+    "firefox_workaround": "about:config → dom.securecontext.allowlist → 192.168.198.130"
+  },
+
+  "_bonnes_pratiques_production": {
+    "1_https": "Configurer un certificat SSL/TLS (Let's Encrypt ou auto-signé)",
+    "2_admin_token": "Générer un hash argon2 sécurisé : vaultwarden hash --preset owasp",
+    "3_email": "Configurer un serveur SMTP pour les notifications et vérifications",
+    "4_2fa": "Activer la double authentification TOTP pour tous les comptes",
+    "5_backup": "Sauvegarder régulièrement /mnt/Stockage/.ix-apps/app_mounts/vaultwarden/",
+    "6_firewall": "Restreindre l'accès au port 30032 aux seules IPs autorisées",
+    "7_signups": "Désactiver signups_allowed après création des comptes nécessaires"
+  }
+}
